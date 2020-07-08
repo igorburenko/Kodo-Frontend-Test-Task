@@ -3,6 +3,7 @@
 @import "modules/header";
 @import "modules/motto-arrow";
 @import "modules/maps";
+@import "modules/article";
 
 
 html {
@@ -29,9 +30,7 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
-  //min-width: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 
   a {
     color: $mainFontColor;
@@ -42,7 +41,7 @@ section,
 .section {
   position: relative;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 1440px;
 
   //padding: 40px 0;
@@ -64,7 +63,7 @@ section,
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -74,7 +73,7 @@ section,
   position: relative;
   margin: 0 auto;
   max-width: 1440px;
-  overflow: hidden;
+  overflow-x: hidden;
 
   //@media screen and (max-width: 1024px) {
   //}
