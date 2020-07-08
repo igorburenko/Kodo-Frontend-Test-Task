@@ -1,0 +1,68 @@
+@import "utils/vars";
+@import "utils/reset";
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section,
+.section {
+  position: relative;
+  //padding: 40px 0;
+  @media screen and (max-width: $smDesktopWidth) {
+    //padding: 36px 0;
+  }
+  @media screen and (max-width: $tableWidth) {
+    //padding: 28px 0;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    //padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+
+  @media screen and (max-width: 1024px) {
+  }
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 500px) {
+  }
+  @media screen and (max-width: 374px) {
+  }
+}
