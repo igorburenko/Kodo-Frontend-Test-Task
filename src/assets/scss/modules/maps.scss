@@ -1,0 +1,55 @@
+@import "./../utils/vars";
+
+.maps {
+  padding-top: 50px;
+  padding-bottom: 28px;
+  display: flex;
+  background-color: $third-bg-color;
+  //flex-wrap: wrap;
+
+  .maps__title {
+    margin-left: 148px;
+    margin-right: 148px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: -0.05em;
+  }
+  .maps__regions {
+    display: flex;
+    flex-wrap: wrap;
+
+    .regions__item {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 22px;
+      position: relative;
+      min-width: 213px;
+      min-height: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -0.05em;
+      border: 1px solid #282828;
+      box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.2);
+      border-radius: 40px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 22px;
+        //margin-top: 3px;
+        //margin-left: 5px;
+        width: 10px;
+        height: 6px;
+        transform: rotateZ(-90deg);
+        background-image: url("/assets/img/svg/arrow-header.svg");
+        background-repeat: no-repeat;
+        transition: transform .2s linear;
+      }
+    }
+  }
+}
