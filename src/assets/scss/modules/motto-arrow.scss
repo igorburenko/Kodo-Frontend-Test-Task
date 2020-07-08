@@ -1,0 +1,72 @@
+@import "./../utils/vars";
+
+.motto {
+  min-height: 600px;
+  padding-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .motto__background {
+    width: 590px;
+    max-width: 50%;
+    height: 664px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("/assets/img/jpg/background-moto.jpg");
+    z-index: -1;
+    @media screen and (max-width: $tableWidth) {
+      left: 200px;
+      max-width: 100%;
+    }
+  }
+
+  .motto__arrow {
+    position: relative;
+    display: contents;
+    height: 100%;
+    width: 100%;
+
+    .arrow__tracer {
+      position: absolute;
+      top: 38%;
+      right: 34.5%
+    }
+
+    .arrow__head {
+      position: absolute;
+      top: 67%;
+      right: 59%;
+    }
+  }
+  .motto__text{
+
+    max-width: 678px;
+    width: 60%;
+    min-height: 138px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: 24px;
+    }
+  }
+  .motto__text_left {
+    @extend .motto__text;
+    margin-left: 153px;
+    margin-top: 80px;
+    padding-bottom: 30px;
+
+
+  }
+
+  .motto__text_right {
+    @extend .motto__text;
+    margin-left: 616px;
+    margin-top: 90px;
+  }
+}

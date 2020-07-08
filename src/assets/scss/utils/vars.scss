@@ -1,8 +1,9 @@
+@import url('https://rsms.me/inter/inter.css');
 /* Vars:
 
    ========================================================================== */
 // Font
-$mainFont                : Inter, Arial, sans-serif;
+$mainFont                : 'Inter', sans-serif;
 
 // Size
 $mainFontColor           : #282828;
@@ -13,7 +14,7 @@ $mainLineHeight          : 150%;
 
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 1024px;
-$tableWidth              : 768px;
+$tableWidth              : 767px;
 $smTableWidth            : 640px;
 $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
@@ -25,6 +26,7 @@ $smPhoneWidth            : 320px;
 
 // Main color
 $default-bg-color        : #E5E5E5;
+$white-bg-color          : #FFFFFF;
 $yellow-logo-color       : #FFCE00;
 $first-bg-color          : #FFD400;
 $second-bg-color         : #545454;

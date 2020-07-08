@@ -24,7 +24,7 @@ time, mark, audio, video {
 // Links
 a {
   text-decoration: none;
-  &:active, &:hover {
+  &:active, &:hover &:visited, &:focus {
     outline: 0;
   }
 }
