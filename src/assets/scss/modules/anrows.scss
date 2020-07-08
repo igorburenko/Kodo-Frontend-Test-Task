@@ -1,0 +1,53 @@
+@import "./../utils/vars";
+
+.anrows {
+  display: flex;
+  flex-wrap: wrap;
+
+  .anrows_left-block {
+    position: relative;
+    width: 50%;
+    height: 713px;
+    background-color: $first-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .anrows_right-block {
+    @extend .anrows_left-block;
+    background-color: $second-bg-color;
+  }
+
+  .anrows__logo, .anrows__logo2 {
+    position: absolute;
+    top: 51px;
+    right: 52px;
+  }
+
+  .anrows_right {
+    color: $secondFontColor;
+  }
+
+  .anrows__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    .anrows__title {
+      max-width: 330px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: -0.05em;
+    }
+    .anrows__text {
+      max-width: 446px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.05em;
+      margin-top: 44px;
+    }
+  }
+}
