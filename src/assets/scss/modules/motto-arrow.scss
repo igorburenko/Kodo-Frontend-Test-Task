@@ -41,6 +41,25 @@
     }
   }
 
+  .motto__ellipse {
+    position: absolute;
+    top: 298px;
+    left: 281px;
+    width: 76px;
+    height: 76px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 14px solid $first-bg-color;
+    color: $first-bg-color;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.05em;
+  }
+
   .motto__text {
 
     max-width: 678px;

@@ -16,8 +16,12 @@ export const moveMottoTextOnLoad = () => {
 export const toggleDropdownMaps = () => {
   if (navMapsDropdownMenu.classList.contains('animate__fadeInDown')) {
     navMapsDropdownMenu.classList.remove('animate__fadeInDown');
-    animateCSS(navMapsDropdownMenu, 'fadeOutUp').then(() =>
-        navMapsDropdownMenuWrapper.style.setProperty('visibility', 'hidden')
+    animateCSS(navMapsDropdownMenu, 'fadeOutUp')
+      .then(() => {
+          if (!navMapsDropdownMenu.classList.contains('animate__fadeInDown')) {
+            navMapsDropdownMenuWrapper.style.setProperty('visibility', 'hidden');
+          }
+        }
       );
   } else {
     navMapsDropdownMenu.classList.remove('animate__fadeOutUp');
@@ -48,6 +52,7 @@ export const animateCSS = (node, animation, prefix = 'animate__') =>
       node.removeEventListener('animationend', handleAnimationEnd);
       resolve('Animation ended');
     }
+
     node.addEventListener('animationend', handleAnimationEnd);
   });
 

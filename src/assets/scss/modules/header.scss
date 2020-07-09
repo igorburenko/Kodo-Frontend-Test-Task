@@ -195,17 +195,16 @@
         border-radius: 5px;
         z-index: 4;
 
-
-
         .dropdown-menu__item {
           min-width: 160px;
           transition: .1s;
           text-align: left;
           padding: 2px 20px;
-
+          color: #FFFFFF;
           &:hover {
-            color: #FFFFFF;
+
             background-color: rgba(160, 127, 0, 0.95);
+            a{color: #FFFFFF;}
           }
         }
       }
