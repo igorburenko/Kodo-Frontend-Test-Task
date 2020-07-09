@@ -1,10 +1,10 @@
 @import "./../utils/vars";
 
 .motto {
-  min-height: 600px;
+  //min-height: 600px;
   padding-top: 64px;
-  display: flex;
-  flex-wrap: wrap;
+  //display: flex;
+  //flex-wrap: wrap;
   overflow: hidden;
 
   .motto__background {
@@ -23,57 +23,127 @@
   }
 
   .motto__arrow {
-    position: relative;
-    display: contents;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    top: 238px;
+    left: 0;
+    width: 1037px;
+    height: 220px;
+    @media screen and (max-width: $desktopWidth) {
+      left: -70px;
+    }
+    @media screen and (max-width: 1100px) {
+      left: -147px;
+      top: 230px;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      left: -219px;
+      top: 215px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      height: 200px;
+      transform: scale(1.1, 1.08);
+      top: 143px;
+      left: -195px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      transform: scale(1 1);
+      top: 132px;
+      left: -231px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      left: -303px;
+      top: 157px;
+      transform: scale(1.1, 1);
+    }
+    @media screen and (max-width: 375px) {
+      left: -317px;
+      transform: scale(1.1, 1);
+    }
 
     .arrow__tracer {
       position: absolute;
-      top: 38%;
-      right: 34.5%
+      top: 0;
+      left: -25px;
+      width: 1036px;
+      height: 200px;
+      @media screen and (max-width: $tableWidth) {
+        left: -143px;
+        width: 1036px;
+        transform: scale(.7142);
+      }
+      @media screen and (max-width: $phoneWidth) {
+        transform: scale(.6, .7);
+        left: -133px;
+      }
     }
 
     .arrow__head {
       position: absolute;
-      top: 67%;
-      right: 59%;
+      top: 160px;
+      left: 556px;
+      @media screen and (max-width: $tableWidth) {
+        top: 133px;
+        left: 409px;
+        transform: scale(.7142);
+      }
+    }
+
+    .motto__ellipse {
+      position: absolute;
+      top: 62px;
+      left: 274px;
+      width: 76px;
+      height: 76px;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      border: 14px solid $first-bg-color;
+      color: $first-bg-color;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width: 1100px) {
+        left: 314px;
+      }
+      @media screen and (max-width: 1100px) {
+        left: 400px;
+      }
+      @media screen and (max-width: $tableWidth) {
+        width: 56px;
+        height: 56px;
+        top: 74px;
+        left: 309px;
+        border-width: 10px;
+        font-size: 36px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        left: 440px;
+      }
     }
   }
 
-  .motto__ellipse {
-    position: absolute;
-    top: 298px;
-    left: 281px;
-    width: 76px;
-    height: 76px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    border: 14px solid $first-bg-color;
-    color: $first-bg-color;
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: -0.05em;
-  }
 
   .motto__text {
-
     max-width: 678px;
-    width: 60%;
     min-height: 138px;
     font-weight: 500;
     font-size: 48px;
     line-height: 120%;
     letter-spacing: -0.05em;
+    @media screen and (max-width: $desktopWidth) {
+      font-size: 45px;
+    }
+    @media screen and (max-width: 1100px) {
+      font-size: 42px;
+    }
     @media screen and (max-width: $smDesktopWidth) {
       font-size: 30px;
     }
     @media screen and (max-width: $tableWidth) {
-      font-size: 24px;
+      font-size: 32px;
+      min-height: fit-content;
     }
   }
 
@@ -83,13 +153,72 @@
     margin-top: 80px;
     padding-bottom: 30px;
     transform: translate3d(-3000px, 0, 0);
-
+    @media screen and (max-width: $desktopWidth) {
+      margin-top: 90px;
+      margin-left: 120px;
+    }
+    @media screen and (max-width: 1100px) {
+      max-width: 600px;
+      font-size: 40px;
+      margin-left: 83px;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      max-width: 500px;
+      font-size: 36px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      max-width: 400px;
+      font-size: 28px;
+      margin-left: 30px;
+      margin-top: 56px;
+      padding: 0;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      font-size: 24px;
+      max-width: 350px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      max-width: 250px;
+    }
   }
 
   .motto__text_right {
     @extend .motto__text;
-    margin-left: 616px;
-    margin-top: 90px;
+    margin: 118px 10px 85px 616px;
     transform: translate3d(3000px, 0, 0);
+    @media screen and (max-width: $desktopWidth) {
+      margin-left: 558px;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 38px;
+    }
+    @media screen and (max-width: 1100px) {
+      margin-left: 479px;
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: 36px;
+      margin-left: 411px;
+      margin-top: 95px;
+      max-width: 500px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: 28px;
+      margin-left: 267px;
+      margin-top: 112px;
+      max-width: 450px;
+    }
+    @media screen and (max-width: $smTableWidth) {
+      font-size: 24px;
+      margin-left: 231px;
+      margin-bottom: 65px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      margin-left: 158px;
+      margin-top: 105px;
+    }
+    @media screen and (max-width: 375px) {
+      margin-left: 133px;
+      margin-top: 107px;
+    }
   }
 }

@@ -10,7 +10,6 @@
     background-color: $first-bg-color;
     display: flex;
     justify-content: center;
-    //align-items: center;
     @media screen and (max-width: $tableWidth) {
       flex-basis: 100%;
     }
