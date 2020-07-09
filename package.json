@@ -28,7 +28,9 @@
     "scss"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "animate.css": "^4.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-transform-runtime": "^7.7.7",

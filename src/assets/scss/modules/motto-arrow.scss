@@ -40,7 +40,8 @@
       right: 59%;
     }
   }
-  .motto__text{
+
+  .motto__text {
 
     max-width: 678px;
     width: 60%;
@@ -56,12 +57,13 @@
       font-size: 24px;
     }
   }
+
   .motto__text_left {
     @extend .motto__text;
     margin-left: 153px;
     margin-top: 80px;
     padding-bottom: 30px;
-
+    transform: translate3d(-3000px, 0, 0);
 
   }
 
@@ -69,5 +71,6 @@
     @extend .motto__text;
     margin-left: 616px;
     margin-top: 90px;
+    transform: translate3d(3000px, 0, 0);
   }
 }

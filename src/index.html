@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Kodo-Frontend-Test-Task</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
 </head>
 <body>
 <div class="wrapper">
     <header class="header">
-        <div class="header__overlay open"></div>
-        <a href="#home" class="anchor-link">
+        <div class="header__overlay"></div>
+        <a href="#home">
             <div class="header__logo">
-                <h1 class="logo__title">DVF Perpretrator <br/>Intervention Systems</h1>
+                <h1 class="logo__title">DVF Perpretrator<br/>Intervention Systems</h1>
             </div>
         </a>
         <button class="header__burger"></button>
-        <ul class="header__nav open">
-            <li class="nav__link">About</li>
-            <li class="nav__link">Contact</li>
-            <li class="nav__link">Articles</li>
-            <li class="nav__dropdown">Maps
-                <!--            <ul class="header__dropdown">-->
-                <!--              <li class="dropdown__item">New South Wales</li>-->
-                <!--              <li class="dropdown__item">Victoria</li>-->
-                <!--              <li class="dropdown__item">Queensland</li>-->
-                <!--              <li class="dropdown__item">South Australia</li>-->
-                <!--              <li class="dropdown__item">Northern Territory</li>-->
-                <!--              <li class="dropdown__item">Tasmania</li>-->
-                <!--              <li class="dropdown__item">ACT</li>-->
-                <!--              <li class="dropdown__item">Western Australia</li>-->
-                <!--            </ul>-->
+        <ul class="header__nav nav">
+            <li class="nav__link"><a href="#">About</a></li>
+            <li class="nav__link"><a href="#">Contact</a></li>
+            <li class="nav__link"><a href="#">Articles</a></li>
+            <li class="nav__dropdown dropdown-menu">Maps
+                <div class="dropdown__wrapper">
+                    <ul class="dropdown-menu__list animate__animated animate__faster">
+                        <li class="dropdown-menu__item"><a href="#">New South Wales</a></li>
+                        <li class="dropdown-menu__item"><a href="#">Victoria</a></li>
+                        <li class="dropdown-menu__item"><a href="#">Queensland</a></li>
+                        <li class="dropdown-menu__item"><a href="#">South Australia</a></li>
+                        <li class="dropdown-menu__item"><a href="#">Northern Territory</a></li>
+                        <li class="dropdown-menu__item"><a href="#">Tasmania</a></li>
+                        <li class="dropdown-menu__item"><a href="#">ACT</a></li>
+                        <li class="dropdown-menu__item"><a href="#">Western Australia</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </header>
@@ -41,10 +47,10 @@
             <img src="/assets/img/svg/arrow-head.svg" alt="arrow" class="arrow__head">
         </div>
 
-        <div class="motto__text_left">
+        <div class="motto__text_left animate__animated">
             <h3>Mapping domestic and family violence perpetrator pathways</h3>
         </div>
-        <div class="motto__text_right">
+        <div class="motto__text_right animate__animated">
             <h3>through perpetrator intervention systems across each state and territory of
                 Australia</h3>
 
@@ -53,14 +59,14 @@
     <section class="maps">
         <h3 class="maps__title">Maps</h3>
         <ul class="maps__regions">
-            <li class="regions__item">New South Wales</li>
-            <li class="regions__item">Victoria</li>
-            <li class="regions__item">Queensland</li>
-            <li class="regions__item">South Australia</li>
-            <li class="regions__item">Northern Territory</li>
-            <li class="regions__item">Tasmania</li>
-            <li class="regions__item">ACT</li>
-            <li class="regions__item">Western Australia</li>
+            <li class="maps-regions__item"><a href="#">New South Wales</a></li>
+            <li class="maps-regions__item"><a href="#">Victoria</a></li>
+            <li class="maps-regions__item"><a href="#">Queensland</a></li>
+            <li class="maps-regions__item"><a href="#">South Australia</a></li>
+            <li class="maps-regions__item"><a href="#">Northern Territory</a></li>
+            <li class="maps-regions__item"><a href="#">Tasmania</a></li>
+            <li class="maps-regions__item"><a href="#">ACT</a></li>
+            <li class="maps-regions__item"><a href="#">Western Australia</a></li>
         </ul>
     </section>
     <section class="article">
