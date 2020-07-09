@@ -5,19 +5,28 @@
   padding-bottom: 28px;
   display: flex;
   background-color: $third-bg-color;
-  //flex-wrap: wrap;
+  @media screen and (max-width: $tableWidth) {
+    flex-wrap: wrap;
+  }
+
 
   .maps__title {
     margin-left: 148px;
-    margin-right: 148px;
+    margin-right: 50px;
     font-weight: 500;
     font-size: 32px;
     line-height: 39px;
     letter-spacing: -0.05em;
+    @media screen and (max-width: $tableWidth) {
+      flex-basis: 100%;
+      margin: 0 0 52px;
+      text-align: center;
+    }
   }
   .maps__regions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .regions__item {
       margin-left: 10px;
@@ -42,8 +51,6 @@
         content: '';
         position: absolute;
         right: 22px;
-        //margin-top: 3px;
-        //margin-left: 5px;
         width: 10px;
         height: 6px;
         transform: rotateZ(-90deg);
