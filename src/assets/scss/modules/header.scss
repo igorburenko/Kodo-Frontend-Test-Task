@@ -14,6 +14,30 @@
   justify-content: space-between;
   max-width: 1440px;
 
+  .header__overlay {
+    display: none;
+    @media screen and (max-width: $tableWidth) {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s ease-in-out;
+      z-index: 3;
+      cursor: pointer;
+      pointer-events: none;
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   .header__burger {
     display: none;
     margin-top: auto;
@@ -58,11 +82,27 @@
   .header__nav {
     display: flex;
     align-items: center;
+    z-index: 5;
     @media screen and (max-width: $tableWidth) {
-      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(280px);
+      flex-direction: column;
+      //justify-content: center;
+      background-color: #FFFFFF;
+      min-width: 280px;
+      height: 100vh;
+      align-items: flex-start;
+      padding: 100px 20px 0;
+      transition: .2s ease-in-out;
+      &.open {
+        transform: translateX(0);
+      }
     }
 
     .nav__link {
+      position: relative;
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
@@ -75,11 +115,40 @@
 
       &:nth-last-child(2) {
         margin-right: 30px;
+        @media screen and (max-width: $tableWidth) {
+          margin-right: 0;
+          &:after {
+            border: none;
+          }
+        }
+      }
+
+      @media screen and (max-width: $tableWidth) {
+        margin-right: 0;
+        margin-bottom: 40px;
+        font-size: 18px;
+        font-weight: 300;
+        margin-left: 20px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 37px;
+          left: -20px;
+          width: 240px;
+          border-top: 1px solid $mainFontColor;
+        }
       }
     }
 
     .nav__dropdown {
-      @extend .nav__link;
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      align-items: center;
+      letter-spacing: -0.05em;
+      cursor: pointer;
       width: 130px;
       height: 30px;
       text-align: center;
@@ -90,7 +159,11 @@
       border: 1px solid $mainFontColor;
       box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.2);
       border-radius: 40px;
-      position: relative;
+      @media screen and (max-width: $tableWidth) {
+        margin-right: 0;
+        font-size: 18px;
+        font-weight: 300;
+      }
 
       &::after {
         content: '';
