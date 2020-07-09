@@ -1,0 +1,103 @@
+@import "./../utils/vars";
+
+.anrows {
+  display: flex;
+  flex-wrap: wrap;
+
+  .anrows_left-block {
+    position: relative;
+    flex: 1 0 50%;
+    background-color: $first-bg-color;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: $tableWidth) {
+      flex-basis: 100%;
+    }
+  }
+
+  .anrows_right-block {
+    @extend .anrows_left-block;
+    background-color: $second-bg-color;
+  }
+
+  .anrows__logo, .anrows__logo2 {
+    position: absolute;
+    top: 51px;
+    right: 52px;
+    @media screen and (max-width: $tableWidth) {
+      right: 50%;
+      transform: translateX(50%) scale(.8);
+    }
+  }
+
+  .anrows__logo2 {
+    @media screen and (max-width: $tableWidth) {
+      right: 50%;
+      transform: translateX(50%) scale(1);
+    }
+  }
+
+  .anrows_right {
+    color: $secondFontColor;
+  }
+
+  .anrows__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 148px;
+    margin-bottom: 174px;
+    padding: 0 40px;
+    @media screen and (max-width: $smDesktopWidth) {
+      padding: 0 20px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      margin-top: 118px;
+      margin-bottom: 74px;
+      padding: 0 30px;
+    }
+
+    .anrows__title {
+      align-self: flex-start;
+      max-width: 230px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: -0.05em;
+      @media screen and (max-width: $smDesktopWidth) {
+        font-size: 25px;
+        line-height: 32px;
+      }
+      @media screen and (max-width: $tableWidth) {
+        align-self: auto;
+        text-align: center;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        max-width: 200px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+    }
+
+    .anrows__text {
+      max-width: 446px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.05em;
+      margin-top: 44px;
+      @media screen and (max-width: $smDesktopWidth) {
+        font-size: 15px;
+        margin-top: 29px;
+      }
+      @media screen and (max-width: $tableWidth) {
+
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+      }
+    }
+  }
+}

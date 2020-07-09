@@ -1,0 +1,159 @@
+@import "./../utils/vars";
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $mainFontColor;
+  padding-top: 95px;
+  padding-bottom: 135px;
+  @media screen and (max-width: $tableWidth) {
+    padding-top: 76px;
+    padding-bottom: 70px;
+  }
+
+  .article__main-text-block {
+    max-width: 674px;
+    margin-bottom: 90px;
+    @media screen and (max-width: $tableWidth) {
+      margin-bottom: 41px;
+    }
+
+    .article__title {
+      padding: 0 30px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: -0.05em;
+      text-align: center;
+      margin-bottom: 40px;
+      @media screen and (max-width: $tableWidth) {
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 26px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    .article__text {
+      padding: 0 30px;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.05em;
+      font-weight: 300;
+      margin-bottom: 25px;
+      @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+        margin-bottom: 22px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .article__about-author {
+    align-self: flex-end;
+    max-width: 663px;
+    width: 100%;
+    height: 188px;
+    background-color: $first-bg-color;
+    position: relative;
+    padding-left: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @media screen and (max-width: $tableWidth) {
+      height: 164px;
+      padding-left: 32px;
+    }
+
+    .about-author__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.05em;
+      @media screen and (max-width: $tableWidth) {
+        font-size: 21px;
+        line-height: 24px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    .about-author__text {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      max-width: 290px;
+      letter-spacing: -0.05em;
+      @media screen and (max-width: $tableWidth) {
+        font-size: 16px;
+        max-width: 35vw;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+        max-width: 39vw;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: -10px;
+      right: 127px;
+      @media screen and (max-width: $tableWidth) {
+        top: -43px;
+        right: 38px;
+        transform: scale(0.75);
+      }
+    }
+  }
+
+  .article__author-acknowledgement {
+    max-width: 674px;
+    padding: 90px 30px 0;
+
+    @media screen and (max-width: $tableWidth) {
+      padding-top: 46px;
+    }
+
+    .author-acknowledgement__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      letter-spacing: -0.05em;
+
+      @media screen and (max-width: $tableWidth) {
+        font-size: 21px;
+        line-height: 24px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    .author-acknowledgement__text {
+      margin-top: 20px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.05em;
+      @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+      }
+
+    }
+  }
+}
