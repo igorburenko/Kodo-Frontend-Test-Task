@@ -46,6 +46,10 @@
       box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.2);
       border-radius: 40px;
       cursor: pointer;
+      @media screen and (max-width: $tableWidth) {
+        min-width: 300px;
+        min-height: 40px;
+      }
 
       &::after {
         content: '';
