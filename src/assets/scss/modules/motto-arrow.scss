@@ -1,10 +1,7 @@
 @import "./../utils/vars";
 
 .motto {
-  //min-height: 600px;
   padding-top: 64px;
-  //display: flex;
-  //flex-wrap: wrap;
   overflow: hidden;
 
   .motto__background {
@@ -28,6 +25,7 @@
     left: 0;
     width: 1037px;
     height: 220px;
+    overflow: hidden;
     @media screen and (max-width: $desktopWidth) {
       left: -70px;
     }
